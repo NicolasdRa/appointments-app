@@ -1,5 +1,3 @@
-import React, { CSSProperties } from 'react';
-
 export const Logo = () => {
   return (
     <svg viewBox='0 0 170 71' xmlns='http://www.w3.org/2000/svg'>

@@ -10,15 +10,12 @@ import { fetchDoctors } from '../../../redux/doctorSlice';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { BookAppointmentForm } from '../../ui/BookAppointmentForm/BookAppointmentForm';
 
-import { useStyles } from './styles';
-
 export const AppRouter = () => {
-  const classes = useStyles();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(fetchDoctors());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Router>

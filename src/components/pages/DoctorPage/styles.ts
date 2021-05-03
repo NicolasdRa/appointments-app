@@ -1,5 +1,4 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import DummyMap from '../../../assets/images/dummyMap.jpg';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({

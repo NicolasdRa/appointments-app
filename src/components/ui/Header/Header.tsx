@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { AppBar, Button, Hidden, IconButton, Toolbar } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar, Button, Hidden, Toolbar } from '@material-ui/core';
 
 import { MenuDesk } from '../MenuDesk/MenuDesk';
 import { MenuMobile } from '../MenuMobile/MenuMobile';

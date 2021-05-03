@@ -8,7 +8,7 @@ import { useStyles } from './styles';
 export const CustomAvatar = () => {
   const classes = useStyles();
 
-  const { firstName, lastName, img } = user;
+  const { firstName, img } = user;
 
   if (user) {
     let initials;
