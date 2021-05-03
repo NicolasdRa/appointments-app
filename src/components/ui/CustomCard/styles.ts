@@ -3,7 +3,7 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      minWidth: 210,
+      minWidth: 200,
       maxWidth: 210,
       display: 'flex',
       flexDirection: 'column',
@@ -17,7 +17,13 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     media: {
-      height: 140,
+      height: 130,
+      borderRadius: '6px',
+      margin: '1rem',
+    },
+
+    btn: {
+      color: theme.palette.common.blue,
     },
   }),
 );

@@ -39,21 +39,10 @@ export const useStyles = makeStyles((theme: Theme) =>
         opacity: 1,
         background: 'rgba(200, 200, 200, 0.2)',
       },
+    },
 
-      [theme.breakpoints.down('sm')]: {
-        width: 'calc(100% - 30px)',
-        marginLeft: '15px',
-        marginBottom: '8px',
-        marginTop: '8px',
-        textAlign: 'left',
-        '& > span:first-child': {
-          justifyContent: 'flex-start',
-        },
-      },
-
-      [theme.breakpoints.up('xl')]: {
-        fontSize: '.9rem',
-      },
+    navLinkActive: {
+      color: theme.palette.common.blue,
     },
 
     menuButton: { marginLeft: '.3rem' },

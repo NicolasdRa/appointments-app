@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 
 import {
@@ -14,21 +14,21 @@ import {
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 import { CustomAvatar } from '../CustomAvatar/CustomAvatar';
+import { user } from '../../../assets/data';
 
 import { useStyles } from './styles';
 
 export const MenuDesk = () => {
   const classes = useStyles();
   const history = useHistory();
+  const location = useLocation();
 
   const isAuthenticated = true;
-  const user = { name: 'John', lastName: 'Doe', img: '' };
 
   // log out functionality
   const handleLogOut = (e: any): void => {
     e.preventDefault();
-    // dispatch(logOutUser());
-    // dispatch(unloadCurrentUser());
+
     history.push('/');
   };
 
@@ -54,12 +54,22 @@ export const MenuDesk = () => {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <Button component={Link} to='/listing' className={classes.navLink}>
+        <Button
+          component={Link}
+          to='/listing'
+          className={clsx(classes.navLink, {
+            [classes.navLinkActive]: location.pathname === '/listing',
+          })}>
           Doctors
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button component={Link} to='/myaccount' className={classes.navLink}>
+        <Button
+          component={Link}
+          to='/myaccount'
+          className={clsx(classes.navLink, {
+            [classes.navLinkActive]: location.pathname === '/myaccount',
+          })}>
           My Account
         </Button>
       </ListItem>
@@ -114,11 +124,11 @@ export const MenuDesk = () => {
         // prop below fixes padding added to body on open
         disableScrollLock={true}>
         {isAuthenticated ? (
-          <MenuItem onClick={handleClose} component={Link} to='/profile'>
-            Your Appointments
+          <MenuItem onClick={handleClose} component={Link} to='/myaccount'>
+            My account
           </MenuItem>
         ) : (
-          <MenuItem onClick={handleClose} component={Link} to='/login'>
+          <MenuItem onClick={handleClose} component={Link} to='/'>
             Login
           </MenuItem>
         )}
@@ -127,7 +137,7 @@ export const MenuDesk = () => {
             Log out
           </MenuItem>
         ) : (
-          <MenuItem onClick={handleClose} component={Link} to='/signup'>
+          <MenuItem onClick={handleClose} component={Link} to='/'>
             Signup
           </MenuItem>
         )}

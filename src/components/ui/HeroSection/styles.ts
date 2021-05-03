@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     imageContainer: {
       display: 'flex',
-      backgroundImage: 'url(' + Image + ')',
+      backgroundImage: `url(${Image})`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
       backgroundPosition: 'top',
@@ -31,11 +31,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.common.chalk,
       margin: '3rem 0 0 2rem',
       fontSize: '3rem',
-      fontFamily: `"Roboto Slab", "Times New Roman", serif`,
+      fontFamily: `'Signika', serif`,
       fontWeight: 700,
 
       [theme.breakpoints.up('md')]: {
-        margin: '4rem 0 0 4rem',
+        margin: '6rem 0 0 4rem',
         fontSize: '3rem',
       },
 
@@ -54,25 +54,34 @@ export const useStyles = makeStyles((theme: Theme) =>
       width: '50%',
 
       [theme.breakpoints.up('md')]: {
-        margin: '1rem 0 0 4rem',
+        margin: '1rem 0 0 4.3rem',
         width: '100%',
+      },
+
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.5rem',
       },
     },
 
     btn: {
-      width: '11rem',
+      width: '7rem',
       color: theme.palette.common.chalk,
       borderColor: theme.palette.common.chalk,
       margin: '1rem 0 0 2rem',
+      '&:hover': {
+        backgroundColor: theme.palette.common.chalk,
+        color: theme.palette.common.blueSubheader,
+      },
 
       [theme.breakpoints.up('md')]: {
         width: '12rem',
-        margin: '1rem 0 0 4rem',
+        margin: '1rem 0 0 4.2rem',
       },
 
       [theme.breakpoints.up('xl')]: {
         width: '15rem',
         fontSize: '1.3rem',
+        margin: '2rem 0 0 4.2rem',
       },
     },
   }),

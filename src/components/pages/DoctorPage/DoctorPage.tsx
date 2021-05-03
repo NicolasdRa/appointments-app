@@ -1,15 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Redirect } from 'react-router-dom';
 
 import {
   Box,
   Button,
   Divider,
   Grid,
+  Hidden,
   Paper,
   Typography,
 } from '@material-ui/core';
 
 import { Header } from '../../ui/Header/Header';
+import { Footer } from '../../ui/Footer/Footer';
+import { BottomNav } from '../../ui/BottomNav/BottomNav';
 
 import { useStyles } from './styles';
 
@@ -31,10 +34,13 @@ export const DoctorPage = () => {
 
   const doctors: Doctor[] = useAppSelector(selectDoctors);
 
-  console.log(doctors);
   const doctor: Doctor = doctors.filter(
     (doctor) => doctor.lastName === name,
   )[0];
+
+  if (!doctor) {
+    return <Redirect to='/' />;
+  }
 
   const { firstName, lastName, picture } = doctor;
 
@@ -233,11 +239,13 @@ export const DoctorPage = () => {
                 </Grid>
               </Grid>
             </Box>
-
-            {/* {matchesSm ? <BottomNav className={classes.bottomNav} /> : <Footer />} */}
           </Box>
         </Grid>
       </Grid>
+      <Footer />
+      <Hidden mdUp>
+        <BottomNav />
+      </Hidden>
     </Box>
   );
 };

@@ -3,13 +3,23 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      minWidth: 640,
       margin: '.5rem 0',
+      [theme.breakpoints.up('lg')]: {
+        minWidth: 375,
+      },
+      [theme.breakpoints.up('xl')]: {
+        minWidth: 560,
+      },
     },
+    date: {
+      fontSize: '.8rem',
+    },
+
     title: {
-      fontSize: '1rem',
+      fontSize: '1.2rem',
     },
-    pos: {
+    doctor: {
+      fontSize: '.8rem',
       marginBottom: 12,
     },
     btnContainer: {

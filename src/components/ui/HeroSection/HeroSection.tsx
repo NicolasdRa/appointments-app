@@ -26,7 +26,7 @@ export const HeroSection = () => {
             variant='outlined'
             color='secondary'
             className={classes.btn}>
-            Find your doctor
+            Start
           </Button>
         </Box>
       </Grid>

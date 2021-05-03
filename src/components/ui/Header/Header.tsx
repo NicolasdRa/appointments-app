@@ -1,17 +1,13 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Hidden,
-  IconButton,
-  Toolbar,
-} from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
+import { AppBar, Button, Hidden, IconButton, Toolbar } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { MenuDesk } from '../MenuDesk/MenuDesk';
-import { useStyles } from './styles';
+import { MenuMobile } from '../MenuMobile/MenuMobile';
 import { Logo } from '../Logo/Logo';
+
+import { useStyles } from './styles';
 
 export const Header = () => {
   const classes = useStyles();
@@ -20,14 +16,11 @@ export const Header = () => {
     <div className={classes.root}>
       <AppBar position='fixed' className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
-          <Box className={classes.logo}>
+          <Button component={Link} to='/' className={classes.logo}>
             <Logo />
-          </Box>
-
+          </Button>
           <Hidden mdUp>
-            <IconButton edge='start' color='inherit' aria-label='menu'>
-              <MenuIcon />
-            </IconButton>
+            <MenuMobile />
           </Hidden>
           <Hidden mdDown>
             <MenuDesk />

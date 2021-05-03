@@ -13,6 +13,8 @@ import {
 import { useStyles } from './styles';
 
 import { Doctor } from '../../../redux/types';
+import { useAppDispatch } from '../../../hooks/hooks';
+import { setCurrent } from '../../../redux/doctorSlice';
 
 interface CustomCardProps {
   key: string;
@@ -21,8 +23,13 @@ interface CustomCardProps {
 
 export const CustomCard = ({ key, doctor }: CustomCardProps) => {
   const classes = useStyles();
+  const dispatch = useAppDispatch();
 
   const { title, firstName, lastName, picture } = doctor;
+
+  const handleClickSetCurrentDoctor = (): void => {
+    dispatch(setCurrent(doctor));
+  };
 
   return (
     <Card className={classes.root}>
@@ -42,10 +49,10 @@ export const CustomCard = ({ key, doctor }: CustomCardProps) => {
       </CardActionArea>
       <CardActions>
         <Button
-          size='small'
-          color='secondary'
           component={Link}
-          to={`doctor/${lastName}`}>
+          to={`doctor/${lastName}`}
+          onClick={handleClickSetCurrentDoctor}
+          className={classes.btn}>
           Make an appoinment
         </Button>
       </CardActions>

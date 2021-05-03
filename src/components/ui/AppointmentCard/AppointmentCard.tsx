@@ -19,8 +19,13 @@ export const AppointmentCard = (appointment: Appointment) => {
   const { date, time, title, doctor, description }: Appointment = appointment;
 
   const handleClickCancel = (): void => {
-    dispatch(cancel(appointment));
-    console.log('cancelled');
+    const confirmationDialogue = window.confirm(
+      'Do you want to delete the appointment?',
+    );
+
+    if (confirmationDialogue === true) {
+      dispatch(cancel(appointment));
+    }
   };
 
   return (
@@ -33,15 +38,15 @@ export const AppointmentCard = (appointment: Appointment) => {
         <Grid item xs={8}>
           <CardContent>
             <Typography
-              className={classes.title}
+              className={classes.date}
               color='textSecondary'
               gutterBottom>
               {date} - {time}
             </Typography>
-            <Typography variant='h5' component='h2'>
+            <Typography variant='h5' component='h2' className={classes.title}>
               {title}
             </Typography>
-            <Typography className={classes.pos} color='textSecondary'>
+            <Typography className={classes.doctor} color='textSecondary'>
               {doctor}
             </Typography>
             <Typography variant='body2' component='p'>

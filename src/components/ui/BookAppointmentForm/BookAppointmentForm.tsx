@@ -100,10 +100,10 @@ export const BookAppointmentForm = () => {
             </Select>
           </FormControl>
           <Grid container direction='row'>
-            <Grid item xs={6}>
+            <Grid item xs={8}>
               <TextField
                 id='date'
-                label='Birthday'
+                label='Date'
                 type='date'
                 name='time'
                 onChange={handleInputChange}
@@ -114,10 +114,10 @@ export const BookAppointmentForm = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={4}>
               <TextField
                 id='time'
-                label='Alarm clock'
+                label='Time'
                 type='time'
                 name='date'
                 onChange={handleInputChange}

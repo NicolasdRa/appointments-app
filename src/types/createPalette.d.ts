@@ -10,5 +10,12 @@ declare module '@material-ui/core/styles/createPalette' {
     turquoise?: string;
     green?: string;
     red?: string;
+    blueSubheader?: string;
+    greyOverlay?: string;
+    textHeadings?: string;
+    texBody?: string;
+    textSubtle?: string;
+    backgroundLight?: string;
+    backgroundSubtle?: string;
   }
 }

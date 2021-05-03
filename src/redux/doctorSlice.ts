@@ -36,7 +36,6 @@ const doctorSlice = createSlice({
   initialState,
   reducers: {
     setCurrent: (state, action: PayloadAction<Doctor>) => {
-      console.log(action.payload);
       state.current = action.payload;
     },
   },

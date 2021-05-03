@@ -4,8 +4,12 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     main: {
       backgroundColor: 'transparent',
-      margin: '0 auto',
-      padding: '2rem 4rem',
+      margin: '0 0 4rem 0',
+
+      [theme.breakpoints.up('md')]: {
+        margin: '0 auto',
+        padding: '2rem 4rem',
+      },
     },
 
     link: {
@@ -18,10 +22,9 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     logo: {
-      height: '2.5rem',
-      margin: '.5rem',
-      color: theme.palette.primary.light,
-      opacity: 0.5,
+      width: '7rem',
+      color: theme.palette.primary.main,
+      opacity: 0.8,
     },
 
     text: {

@@ -1,32 +1,27 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import DummyMap from '../../../assets/images/dummyMap.jpg';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    loader: {
-      display: 'flex',
-      margin: '35vh auto',
-    },
+    main: { width: '100vw' },
 
-    container: {
+    imageContainer: {
       display: 'flex',
-      flexDirection: 'column',
-      flex: '0 0 auto',
-      width: '100%',
-    },
-
-    header: {
       backgroundColor: theme.palette.secondary.main,
-      height: '18vh',
-      borderRadius: '6px',
-      boxShadow:
-        '0 5px 15px -8px rgb(0 0 0 / 24%), 0 8px 10px -5px rgb(0 0 0 / 20%)',
-    },
-
-    content: {
-      display: 'flex',
+      height: '20vh',
+      width: '90vw',
       flexDirection: 'column',
-      margin: '0 1rem',
+      borderRadius: '12px',
+      // boxShadow:
+      //   '0 5px 15px -8px rgb(0 0 0 / 24%), 0 8px 10px -5px rgb(0 0 0 / 20%)',
+
+      [theme.breakpoints.up('md')]: {
+        height: '20vh',
+      },
+
+      [theme.breakpoints.up('lg')]: {
+        height: '20vh',
+        width: '70vw',
+      },
     },
 
     userImg: {
@@ -35,14 +30,22 @@ export const useStyles = makeStyles((theme: Theme) =>
       borderRadius: '6px',
       height: 'auto',
       maxWidth: '100%',
-      margin: '2rem 2rem 0 1rem',
+      margin: '1rem',
+
+      [theme.breakpoints.up('xl')]: {
+        height: '8rem',
+        margin: '2rem',
+      },
     },
 
     user_info: {
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
-      margin: '3rem 1rem',
+      margin: '1rem 0',
+
+      [theme.breakpoints.up('xl')]: {
+        margin: '2rem 0',
+      },
     },
 
     userFullName: {
@@ -53,9 +56,18 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     infoBlock: {
       padding: '1rem',
-      margin: '0 0 1rem 0',
-      minWidth: '35vw',
-      minHeight: '25vh',
+      margin: '0 1rem',
+      minHeight: '30vh',
+      minWidth: '320px',
+      backgroundColor: theme.palette.common.beigeLight,
+
+      [theme.breakpoints.up('lg')]: {
+        minWidth: '420px',
+      },
+
+      [theme.breakpoints.up('xl')]: {
+        minWidth: '320px',
+      },
     },
 
     gallery: {
@@ -63,6 +75,12 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexDirection: 'column',
       marginTop: '3rem',
       flex: '0 0 auto',
+    },
+
+    title: {
+      color: theme.palette.common.blue,
+      fontWeight: 'bolder',
+      margin: '.5rem',
     },
 
     text: {

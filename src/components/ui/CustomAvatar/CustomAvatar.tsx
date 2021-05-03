@@ -1,9 +1,9 @@
 import Avatar from '@material-ui/core/Avatar';
 import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
 
-import { useStyles } from './styles';
-
 import { user } from '../../../assets/data';
+
+import { useStyles } from './styles';
 
 export const CustomAvatar = () => {
   const classes = useStyles();
