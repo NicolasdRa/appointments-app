@@ -26,8 +26,12 @@ export const Footer = () => {
             <Grid item component={Link} to='/listing' className={classes.link}>
               Doctors
             </Grid>
-            <Grid item component={Link} to='/profile' className={classes.link}>
-              Appointments
+            <Grid
+              item
+              component={Link}
+              to='/myaccount'
+              className={classes.link}>
+              My account
             </Grid>
           </Grid>
         </Hidden>

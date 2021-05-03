@@ -21,7 +21,7 @@ interface CustomCardProps {
   doctor: Doctor;
 }
 
-export const CustomCard = ({ key, doctor }: CustomCardProps) => {
+export const CustomCard = ({ doctor }: CustomCardProps) => {
   const classes = useStyles();
   const dispatch = useAppDispatch();
 

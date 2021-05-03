@@ -131,7 +131,7 @@ export const AccountPage = () => {
                 </Typography>
               ) : (
                 appointments.map((appointment) => (
-                  <AppointmentCard {...appointment} />
+                  <AppointmentCard key={appointment.id} {...appointment} />
                 ))
               )}
             </Paper>

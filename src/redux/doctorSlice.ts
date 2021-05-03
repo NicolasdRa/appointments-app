@@ -1,16 +1,17 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 import type { RootState } from './store';
-import axios from 'axios';
 import { Doctor } from './types';
+import { APP_ID, baseURL } from '../constants';
 
 // THUNKS
 export const fetchDoctors = createAsyncThunk('doctors/fetch', async () => {
   const res = await axios({
-    method: 'get',
-    url: 'https:dummyapi.io/data/api/user?limit=10',
+    method: 'GET',
+    url: `${baseURL}`,
     headers: {
-      'app-id': '608c47a1017d2283dce814a6',
+      'app-id': `${APP_ID}`,
     },
     responseType: 'json',
   });
