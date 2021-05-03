@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# MY DOC - APPOINTMENTS APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Assignment
+Create a small, simple web app (TypeScript + React) to manage doctor’s appointments.
 
-## Available Scripts
+A UI should be built to support creating a new appointment and cancelling an existing one.
 
-In the project directory, you can run:
+Focus is on UI, don’t invest much on the server: just have dummy data served statically or by express. Suppose no login is needed.
 
-### `yarn start`
+## Requirements 
+* An appointment has a title, date, and time
+* Design / structure (e.g. navbar/footer/sections) that looks nice & doesn’t break on different screens.
+* Navigation between pages work
+* The code is maintainable (clean code/architecture, tests)
+* Document assumptions, decisions, and simplifications, so to make the context clear.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## UX Specifications
+* user can browse over a list of doctors
+* user can checkout a doctor's profile
+* user can make an appointment
+* user can go over a list of his appointments
+* user can cancel an appointment
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development
+1. The application was developed from scratch between Sat 01.05.2021 and Mon 03.05.2021 
+2. Stack: React, Typescript, Redux, Redux Toolkit & Material UI.
 
-### `yarn build`
+## Data & State Management
+* User Data hardcoded (no login required in assignment)
+* Doctors data retrieved from fake users api. Results loaded onto Redux.
+* Appointments managed with Redux.
+* Ui form actions managed with redux.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Considerations 
+1.  A daily limit of 500 calls is imposed by https://dummyapi.io/.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tests
+1.  By 03.05.2021 test have not been yet implemented due to my limited time availablity. I prioritised building the app and dealing with the ui as requested.
+2.  Next step would be to write tests with jest and enzyme.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
+* repo on github: https://github.com/NicolasdRa/appointments-app
+* deployed on netlify: https://mydoc-appointments.netlify.app
