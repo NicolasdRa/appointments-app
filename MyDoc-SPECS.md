@@ -22,22 +22,23 @@ Focus is on UI, don’t invest much on the server: just have dummy data served s
 * user can go over a list of his appointments
 * user can cancel an appointment
 
-## State management
-* State management implemented with Redux & Redux toolkit
-* Doctors data (fake api results) loaded onto Redux
+
+## Development
+1. The application was developed from scratch between Sat 01.05.2021 and Mon 03.05.2021 
+2. Stack: React, Typescript, Redux, Redux Toolkit & Material UI.
+
+## Data & State Management
+* User Data hardcoded (no login required in assignment)
+* Doctors data retrieved from fake users api. Results loaded onto Redux.
 * Appointments managed with Redux.
-* User Data hardcoded (no login required)
+* Ui form actions managed with redux.
 
 ## Considerations 
 1.  A daily limit of 500 calls is imposed by https://dummyapi.io/.
 
-## Development
-1. The application was developed from scratch between Sat 01.05.2021 and Mon 03.05.2021
-
-### Tests
-1.  By 03.05.2021 test have not been yet implemented. 
-2.  Due to my limited time availablity I prioritised building the app and dealing with the ui as requested.
-3.  Next step would be to write tests with jest and enzyme.
+## Tests
+1.  By 03.05.2021 test have not been yet implemented due to my limited time availablity. I prioritised building the app and dealing with the ui as requested.
+2.  Next step would be to write tests with jest and enzyme.
 
 ## Deployment
 * repo on github: https://github.com/NicolasdRa/appointments-app
