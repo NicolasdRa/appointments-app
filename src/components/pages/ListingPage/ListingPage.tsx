@@ -18,7 +18,7 @@ export const ListingPage = () => {
   const doctors: Doctor[] = useAppSelector(selectDoctors);
 
   return (
-    <Box className={classes.main}>
+    <Box>
       <Header />
       <Grid container direction='column' justify='center' alignItems='center'>
         <Box className={classes.imageContainer} />

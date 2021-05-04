@@ -6,14 +6,11 @@ import { BlurbSection } from '../../ui/BlurbSection/BlurbSection';
 
 import { Footer } from '../../ui/Footer/Footer';
 
-import { useStyles } from './styles';
 import { BottomNav } from '../../ui/BottomNav/BottomNav';
 
 export const LandingPage = () => {
-  const classes = useStyles();
-
   return (
-    <Box className={classes.main}>
+    <Box>
       <Header />
       <HeroSection />
       <BlurbSection />

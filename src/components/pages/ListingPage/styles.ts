@@ -4,20 +4,6 @@ import Image from '../../../assets/images/staff6.png';
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    '@global': {
-      '*::-webkit-scrollbar': {
-        height: '.2rem',
-        width: '.4rem',
-        borderRadius: '2px',
-      },
-      '*::-webkit-scrollbar-thumb': {
-        backgroundColor: theme.palette.secondary.main,
-        opacity: 0.8,
-      },
-    },
-
-    main: { width: '100vw' },
-
     imageContainer: {
       display: 'flex',
       backgroundImage: `url(${Image})`,
