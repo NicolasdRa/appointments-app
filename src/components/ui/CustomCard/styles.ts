@@ -23,7 +23,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     btn: {
-      color: theme.palette.common.blue,
+      color: theme.palette.common.beige,
     },
   }),
 );

@@ -39,12 +39,13 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     logo: {
       display: 'flex',
-      width: '4.5rem',
-      marginLeft: '1rem',
+      width: '5.5rem',
+      marginLeft: '.5rem',
       opacity: 0.8,
 
       [theme.breakpoints.up('md')]: {
         width: '7rem',
+        marginLeft: '1rem',
       },
       [theme.breakpoints.up('lg')]: {
         width: '6rem',

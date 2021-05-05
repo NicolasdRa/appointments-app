@@ -1,4 +1,4 @@
-import { Box, Grid, Hidden, Paper, Typography } from '@material-ui/core';
+import { Box, Grid, Hidden, Typography } from '@material-ui/core';
 
 import { Header } from '../../ui/Header/Header';
 import { Footer } from '../../ui/Footer/Footer';
@@ -23,16 +23,18 @@ export const ListingPage = () => {
       <Grid container direction='column' justify='center' alignItems='center'>
         <Box className={classes.imageContainer} />
         <Grid item xs={12} lg={8}>
-          <Paper className={classes.galleryContainer}>
+          <Box className={classes.galleryContainer}>
             <Typography variant='subtitle1' className={classes.text}>
-              Browse our featured practitioners
+              Browse over our featured practitioners
             </Typography>
-            <Box className={classes.cardGallery}>
-              {doctors.map((doctor) => (
-                <CustomCard key={doctor.id} doctor={doctor} />
-              ))}
+            <Box>
+              <Box className={classes.cardGallery}>
+                {doctors.map((doctor) => (
+                  <CustomCard key={doctor.id} doctor={doctor} />
+                ))}
+              </Box>
             </Box>
-          </Paper>
+          </Box>
         </Grid>
       </Grid>
       <Footer />

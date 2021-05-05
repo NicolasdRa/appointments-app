@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     imageContainer: {
       display: 'flex',
-      backgroundColor: theme.palette.secondary.main,
+      backgroundColor: theme.palette.common.beigeLight,
       height: '20vh',
       width: '90vw',
       flexDirection: 'column',
@@ -32,6 +32,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       maxWidth: '100%',
       margin: '1rem',
 
+      [theme.breakpoints.up('lg')]: {
+        height: '7rem',
+        margin: '1.3rem 2rem',
+      },
+
       [theme.breakpoints.up('xl')]: {
         height: '8rem',
         margin: '2rem',
@@ -49,25 +54,39 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     userFullName: {
-      color: theme.palette.common.chalk,
+      color: theme.palette.primary.main,
     },
 
     discipline: {},
 
-    infoBlock: {
-      padding: '1rem',
-      margin: '0 1rem',
-      minHeight: '30vh',
-      minWidth: '320px',
-      backgroundColor: theme.palette.common.beigeLight,
+    content: {
+      width: '90vw',
+      borderRadius: '12px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      margin: '1rem',
 
       [theme.breakpoints.up('lg')]: {
-        minWidth: '420px',
+        flexDirection: 'row',
+        width: '70vw',
+      },
+    },
+
+    infoBlock: {
+      padding: '1rem',
+      minHeight: '30vh',
+      // backgroundColor: theme.palette.common.beigeLight,
+
+      [theme.breakpoints.up('lg')]: {
+        minWidth: '34.5vw',
       },
 
-      [theme.breakpoints.up('xl')]: {
-        minWidth: '320px',
-      },
+      [theme.breakpoints.up('xl')]: {},
+    },
+
+    infoLine: {
+      display: 'flex',
     },
 
     gallery: {
@@ -78,13 +97,19 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     title: {
-      color: theme.palette.common.blue,
+      fontSize: '1.2rem',
+      margin: '.5rem .5rem 1rem .5rem',
+    },
+
+    boldText: {
       fontWeight: 'bolder',
-      margin: '.5rem',
+      flexDirection: 'column',
+      flex: '0 0 auto',
+      lineHeight: 1.8,
+      margin: '.5rem 0 .5rem .5rem',
     },
 
     text: {
-      display: 'flex',
       flexDirection: 'column',
       flex: '0 0 auto',
       lineHeight: 1.8,
@@ -93,9 +118,10 @@ export const useStyles = makeStyles((theme: Theme) =>
 
     bookBtn: {
       display: 'flex',
-      alignItems: 'center',
+      color: theme.palette.primary.main,
+      backgroundColor: theme.palette.common.beigeLight,
       width: '14rem',
-      margin: '1.5rem auto',
+      margin: '2rem 0',
     },
 
     divider: {

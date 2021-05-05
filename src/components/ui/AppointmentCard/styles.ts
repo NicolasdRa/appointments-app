@@ -4,6 +4,7 @@ export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       margin: '.5rem 0',
+
       [theme.breakpoints.up('lg')]: {
         minWidth: 375,
       },

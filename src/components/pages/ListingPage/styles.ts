@@ -23,38 +23,33 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     galleryContainer: {
-      margin: '1rem 1.6rem',
       position: 'relative',
+      margin: '1rem 1.6rem',
       borderRadius: '8px ',
-      backgroundColor: theme.palette.common.backgroundSubtle,
-      padding: '1rem 1rem',
-      // boxShadow:
-      //   '0 16px 24px 2px rgb(0 0 0 / 14%), 0 6px 30px 5px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%)',
-      // zIndex: 500,
 
       [theme.breakpoints.up('lg')]: {
         margin: '2rem 0 0 0',
         position: 'relative',
         borderRadius: '8px ',
-        padding: '2rem 2rem',
+        // padding: '2rem 2rem',
+        width: '100%',
       },
 
       [theme.breakpoints.up('lg')]: {
-        margin: '2rem 0 0 0',
+        margin: '2rem 0 ',
         position: 'relative',
         borderRadius: '8px ',
-        padding: '3rem 5rem',
       },
     },
 
     text: {
-      color: theme.palette.common.blue,
-      fontSize: '.9rem',
+      fontSize: '1rem',
       lineHeight: 1.8,
-      margin: '.5rem',
+      margin: '1.5rem 0 .5rem 1rem',
 
       [theme.breakpoints.up('lg')]: {
         fontSize: '1.2rem',
+        margin: '1.5rem 0 1rem 1rem',
       },
     },
 

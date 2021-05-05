@@ -78,50 +78,65 @@ export const AccountPage = () => {
             </Grid>
           </Grid>
         </Box>
-        <Grid
-          item
-          container
-          direction='row'
-          justify='center'
-          alignItems='flex-start'
-          spacing={3}
-          xs={12}
-          lg={8}>
-          <Grid item container xs={12} lg={6}>
+        <Box className={classes.content}>
+          <Box>
             <Grid item xs={12}>
-              <Paper className={classes.infoBlock}>
+              <Box className={classes.infoBlock}>
                 <Typography variant='subtitle1' className={classes.title}>
                   Patient Info
                 </Typography>
-                <Typography variant='body2' className={classes.text}>
-                  Name: {firstName} {lastName}
-                </Typography>
-                <Typography variant='body2' className={classes.text}>
-                  email: {email}
-                </Typography>
-                <Typography variant='body2' className={classes.text}>
-                  member since: {memberSince}
-                </Typography>
-                <Typography variant='body2' className={classes.text}>
-                  date of birth: {dateOfBirth}
-                </Typography>
-                <Typography variant='body2' className={classes.text}>
-                  insurance: {insurance}
-                </Typography>
+                <Box className={classes.infoLine}>
+                  <Typography variant='body2' className={classes.boldText}>
+                    Name:{' '}
+                  </Typography>
+                  <Typography variant='body2' className={classes.text}>
+                    {firstName} {lastName}
+                  </Typography>
+                </Box>
+                <Box className={classes.infoLine}>
+                  <Typography variant='body2' className={classes.boldText}>
+                    email:
+                  </Typography>
+                  <Typography variant='body2' className={classes.text}>
+                    {email}
+                  </Typography>
+                </Box>
+                <Box className={classes.infoLine}>
+                  <Typography variant='body2' className={classes.boldText}>
+                    member since:
+                  </Typography>
+                  <Typography variant='body2' className={classes.text}>
+                    {memberSince}
+                  </Typography>
+                </Box>
+                <Box className={classes.infoLine}>
+                  <Typography variant='body2' className={classes.boldText}>
+                    date of birth:
+                  </Typography>
+                  <Typography variant='body2' className={classes.text}>
+                    {dateOfBirth}
+                  </Typography>
+                </Box>
+                <Box className={classes.infoLine}>
+                  <Typography variant='body2' className={classes.boldText}>
+                    insurance:
+                  </Typography>
+                  <Typography variant='body2' className={classes.text}>
+                    {insurance}
+                  </Typography>
+                </Box>
 
-                <Divider className={classes.divider} />
                 <Button
                   variant='contained'
-                  color='secondary'
                   className={classes.bookBtn}
                   onClick={handleOpenForm}>
                   BOOK AN APPOINTMENT
                 </Button>
-              </Paper>
+              </Box>
             </Grid>
-          </Grid>
-          <Grid item container xs={12} lg={6}>
-            <Paper className={classes.infoBlock}>
+          </Box>
+          <Box>
+            <Box className={classes.infoBlock}>
               <Typography variant='subtitle1' className={classes.title}>
                 Current appointments ({appointments.length})
               </Typography>
@@ -134,9 +149,9 @@ export const AccountPage = () => {
                   <AppointmentCard key={appointment.id} {...appointment} />
                 ))
               )}
-            </Paper>
-          </Grid>
-        </Grid>
+            </Box>
+          </Box>
+        </Box>
       </Grid>
       <Footer />
       <Hidden mdUp>

@@ -24,13 +24,12 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     navLink: {
-      color: theme.palette.secondary.main,
+      color: theme.palette.common.beige,
       opacity: 0.8,
       padding: '.5rem 1rem',
-      fontSize: '.8rem',
-      textTransform: 'uppercase',
+      fontSize: '.9rem',
       borderRadius: '4px',
-      borderColor: theme.palette.secondary.main,
+
       lineHeight: '20px',
       textDecoration: 'none',
       margin: '0px',
@@ -42,7 +41,11 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
 
     navLinkActive: {
-      color: theme.palette.common.blue,
+      color: theme.palette.primary.main,
+      textDecoration: 'underline',
+      textDecorationThickness: '2px',
+      textDecorationColor: theme.palette.common.greyOverlay,
+      textUnderlineOffset: '8px',
     },
 
     menuButton: { marginLeft: '.3rem' },

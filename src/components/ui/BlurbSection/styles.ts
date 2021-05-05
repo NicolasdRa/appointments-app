@@ -34,5 +34,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       color: theme.palette.primary.main,
       marginTop: '1.5rem',
     },
+
+    bold: {
+      fontWeight: 'bolder',
+      display: 'inline',
+    },
   }),
 );

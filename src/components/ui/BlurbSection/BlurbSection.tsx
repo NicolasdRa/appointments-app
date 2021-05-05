@@ -12,13 +12,14 @@ export const BlurbSection = () => {
       <Box className={classes.blurb}>
         <LocalHospitalOutlinedIcon color='secondary' style={{ fontSize: 60 }} />
         <Typography className={classes.text}>
-          Access to thousands of healthcare professionals
+          Access to <Box className={classes.bold}>thousands</Box> of healthcare
+          professionals
         </Typography>
       </Box>
       <Box className={classes.blurb}>
         <TodayOutlinedIcon color='secondary' style={{ fontSize: 60 }} />
         <Typography className={classes.text}>
-          Make an appointment 24/7
+          Make an appointment <Box className={classes.bold}>24/7</Box>
         </Typography>
       </Box>
       <Box className={classes.blurb}>
@@ -27,7 +28,7 @@ export const BlurbSection = () => {
           style={{ fontSize: 60 }}
         />
         <Typography className={classes.text}>
-          Checkout your appoinment history
+          Checkout your <Box className={classes.bold}>appointment history</Box>
         </Typography>
       </Box>
     </Box>
