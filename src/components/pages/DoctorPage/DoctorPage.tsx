@@ -6,7 +6,6 @@ import {
   Divider,
   Grid,
   Hidden,
-  Paper,
   Typography,
 } from '@material-ui/core';
 
