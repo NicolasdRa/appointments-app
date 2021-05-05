@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Grid,
-  Hidden,
-  Paper,
-  Typography,
-} from '@material-ui/core';
+import { Box, Button, Grid, Hidden, Typography } from '@material-ui/core';
 
 import { Header } from '../../ui/Header/Header';
 import { Footer } from '../../ui/Footer/Footer';
