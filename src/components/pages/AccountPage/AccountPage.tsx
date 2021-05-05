@@ -74,8 +74,8 @@ export const AccountPage = () => {
           <Box>
             <Grid item xs={12}>
               <Box className={classes.infoBlock}>
-                <Typography variant='subtitle1' className={classes.title}>
-                  Patient Info
+                <Typography variant='subtitle1' className={classes.text}>
+                  PATIENT INFO
                 </Typography>
                 <Box className={classes.infoLine}>
                   <Typography variant='body2' className={classes.boldText}>
@@ -129,8 +129,8 @@ export const AccountPage = () => {
           </Box>
           <Box>
             <Box className={classes.infoBlock}>
-              <Typography variant='subtitle1' className={classes.title}>
-                Current appointments ({appointments.length})
+              <Typography variant='subtitle1' className={classes.text}>
+                CURRENT APPOINTMENTS ({appointments.length})
               </Typography>
               {appointments.length === 0 ? (
                 <Typography variant='body2' className={classes.text}>
