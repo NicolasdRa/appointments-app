@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <LandingPage/> should render <LandingPage/> correctly 1`] = `
+<Styled(MuiBox)>
+  <Header />
+  <HeroSection />
+  <BlurbSection />
+  <Footer />
+  <Hidden
+    mdUp={true}
+  >
+    <BottomNav />
+  </Hidden>
+</Styled(MuiBox)>
+`;

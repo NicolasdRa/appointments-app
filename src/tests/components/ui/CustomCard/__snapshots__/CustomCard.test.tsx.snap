@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests on <CustomCard/> should render <CustomCard/> correctly 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "store": Object {
+        "@@observable": [Function],
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "subscription": Subscription {
+        "handleChangeWrapper": [Function],
+        "listeners": Object {
+          "notify": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "@@observable": [Function],
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": null,
+      },
+    }
+  }
+>
+  <CustomCard
+    doctor={
+      Object {
+        "email": "heinz-georg.fiedler@example.com",
+        "firstName": "Heinz-Georg",
+        "id": "0F8JIqi4zwvb77FGz6Wt",
+        "lastName": "Fiedler",
+        "picture": "https://randomuser.me/api/portraits/men/81.jpg",
+        "title": "mr",
+      }
+    }
+    key="1"
+  />
+</ContextProvider>
+`;
