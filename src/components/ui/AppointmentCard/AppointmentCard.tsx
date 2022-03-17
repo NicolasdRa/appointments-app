@@ -12,7 +12,11 @@ import { Appointment } from '../../../redux/types';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { cancel } from '../../../redux/appointmentSlice';
 
-export const AppointmentCard = (appointment: Appointment) => {
+interface AppointmentCardProps {
+  appointment: Appointment;
+}
+
+export const AppointmentCard = ({ appointment }: AppointmentCardProps) => {
   const classes = useStyles();
   const dispatch = useAppDispatch();
 
